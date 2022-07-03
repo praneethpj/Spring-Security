@@ -33,7 +33,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/")
                 .permitAll()
                 .antMatchers("/dashboard")
-                .hasAuthority("USER")
+                .hasAnyAuthority("USER","ADMIN")
                 .antMatchers("/adminpage")
                 .hasAuthority("ADMIN")
                 .anyRequest()
